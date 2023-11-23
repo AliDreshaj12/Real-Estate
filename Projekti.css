@@ -191,9 +191,34 @@
 }
 .marketing{
     width: 100%;
-    background-color: gray;
-    height: 30%;
+    background-color:#1f1f1f;
+    height: 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    
 }
+.marketing p{
+    margin-top: 33px;
+    color: #c74810;
+    font-size: 24px;
+}
+.marketing h1{
+    color: #cd9c8a;
+    font-size: 54px;
+    margin-top: 13px;
+}
+.bt1{
+    margin-top: 16px;
+    background-color: #ff8620;
+    width: 130px;
+    height: 50px;
+    border: none;
+    font-size: 18px;
+    
+}
+
 .registerf{
     width: 100%;
     height: 60%;
@@ -240,16 +265,19 @@
 .div2{
 
     width: 34%;
-    background-color: #000000;
-    display: flex;
-    flex-direction: column;
+    background-color:#000000;
+    
+    
+    
 }
+
 .div2 input{
-    color: #ffffff;
+    
+    color:white;
     font-size: 18px;
     background: transparent;
     width: 89%;
-    margin-top: 20px;
+    margin-top: 35px;
     border-top: none;
     border-left: none;
     border-right: none;
@@ -259,6 +287,38 @@
     color: #ff8620;
     
 }
+.form-group{
+    display: flex;
+    width: 89%;
+}
+
+.form-group input:first-child{
+    margin-right: 20px;
+    width: 90vh;
+}
+.form-group2{
+    display: flex;
+    width: 89%;
+}
+.form-group2 input:first-child{
+    margin-right: 20px;
+}
+.marketing1{
+    width: 100%;
+    height: 60%;
+    background-color:#1f1f1f;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.marketing1 img{
+    height: 87%;
+    width: 43.5%;
+
+}
+
+
 
 
 
