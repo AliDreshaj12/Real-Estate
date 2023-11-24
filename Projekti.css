@@ -317,6 +317,44 @@
     width: 43.5%;
 
 }
+.schedule {
+    
+    display: flex;
+    width: 100%;
+    height: 550px;
+    
+  }
+  
+  .days div,
+  .times div {
+    padding: 5px;
+    color: white;
+    margin-top: 40px;
+   
+    
+  }
+  .days{
+      margin-right: 30px;
+  }
+  .cc{
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      
+      
+  }
+  .bb{
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      
+  }
+  .div h1{
+    font-size: 46px;
+    color:  #cd9c8a;
+    margin-top: 20px;
+  }
 
 
 
