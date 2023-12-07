@@ -51,7 +51,7 @@
    }
    a{
        text-decoration:none ;
-       color: black;
+       
    }
    li:hover{
        transition: all 0.2s ease-in;
@@ -199,6 +199,23 @@
 
     
 }
+.marketing2 h1{
+    color: #c74810;
+     margin-top: 15px;
+      font-size: 55px;
+      margin-bottom: 6px;
+}
+.marketing2 p{
+    color: white;
+     font-size: 20px;
+}
+.hr3{
+    width: 65px;
+    height: 5px;
+    background-color: #ffffff;
+    margin-bottom: 25px;
+  }
+
 .marketing p{
     margin-top: 33px;
     color: #c74810;
