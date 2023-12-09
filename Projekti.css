@@ -358,7 +358,7 @@
   .times div {
     padding: 5px;
     color: white;
-    margin-top: 40px;
+    margin-top: 50px;
     color: #c74810;
    
     
@@ -416,7 +416,7 @@
       display: flex;
       justify-content: center;
       background-color: #000000;
-      
+         
   }
   .div h1{
     font-size: 46px;
