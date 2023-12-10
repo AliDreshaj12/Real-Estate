@@ -13,7 +13,7 @@ function validateForm() {
         alert("Please enter your email");
         return false;
     }
-    if (password.length < 8) {
+    if (password.length < 6) {
         alert("The password must contain 8 characters");
         return false;
     }
@@ -29,7 +29,7 @@ function validateForm2() {
         alert("Username can only contain letters and numbers");
         return false;
     }
-    if (password.length < 8) {
+    if (password.length < 6) {
         alert("The password must contain 6 characters");
         return false;
     }

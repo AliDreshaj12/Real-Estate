@@ -43,6 +43,7 @@
     bottom: -12px;
     left: 50%;
     transform: translate(-50%);
+
 }
 
 
@@ -102,4 +103,6 @@ form p a{
 .btn-field button.disable{
     background: #eaeaea;
     columns: #555;
+
+
 }
