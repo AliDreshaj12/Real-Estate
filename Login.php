@@ -1,3 +1,44 @@
+<?php
+    session_start();
+
+    include("db.php");
+
+    if($_SERVER['REQUEST_METHOD'] == "POST"){
+        $user_name = $_POST['username'];
+        $passw = $_POST['psw'];
+
+        if(!empty($user_name) && !empty($passw) && !is_numeric($user_name)){
+            $query= "Select * From form where username = '$user_name' limit 1";
+            $result = mysqli_query($con, $query);
+
+            if($result){
+
+                if($result && mysqli_num_rows($result) > 0){
+                    $user_data = mysqli_fetch_assoc($result);
+
+
+
+                    if($user_data['psw'] == $passw){
+                        session_start();
+                        $_SESSION['name'] = $user_data['username'];
+                        $_SESSION['roli'] = $user_data['roli'];
+
+                        header("location:home-page.php");
+                        die;
+
+                    }
+                }
+            }
+            echo "<script type='text/javascript'> alert('Wrong username or password')</script>";
+        }
+        else{
+            echo "<script type='text/javascript'> alert('Wrong username or password')</script>";
+        }
+
+    }
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,12 +55,12 @@
                 <div class="input-group">
                     <div class="input-field" id="nameField" >
                         <i class="fa-solid fa-user"></i>
-                        <input type="text" id="username2" placeholder="username" >
+                        <input type="text" id="username" placeholder="username" >
                     </div>
                     
                     <div class="input-field">
                         <i class="fa-solid fa-lock"></i>
-                        <input type="password" id="password2" placeholder="password" >
+                        <input type="password" id="psw" placeholder="password" >
                     </div>
                     <p>Lost password <a href="#">Click Here</a></p>
                     <p>Not a member? <a href="Signup.html">Sign Up</a></p>
@@ -35,4 +76,4 @@
     <script src="Login.js"></script>
     
 </body>
-</html
+</html>

@@ -6,22 +6,12 @@
     <title>Document</title>
 </head>
 <body>
-    <header>
-        
-        <nav >
-            <div  class="logo">
-                <h1>Real estate</h1>
-            </div>
-            <div class="navbarLinks">
-                <ul>
-                    <li><a href="Projekti.html">Home</a></li>
-                    <li><a href="Contact Us.html">Contact Us</a></li>
-                    <li><a href="About Us.html">About Us</a></li>
-                    <li><a href="Login.html">Login</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
+<?php
+    
+    include('header.php');
+    echo $header1;
+
+    ?>
     <div class="Komenti">
         <div class="komenti1">Ready, Set, Shop!</div>
         <div class="komenti2">Ready, Set, Shop!</div>
