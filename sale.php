@@ -25,93 +25,90 @@
     <div class="divk">
         
     <div class="latestvideo">
-        <h3>Latest Videos</h3>
-        <p>Page <button value="1">1</button> of 180</p>
+        <h3>Homes for sale</h3>
+        <p>Page <button value="1">1</button> of 1</p>
     </div>
     <div class="fotografit">
         <div class="rubrika">
             <img src="photos/009_6415_DAHLONEGA_ROAD_290588_524670.webp" alt="" class="img">
             <div class="views_date">
-                <p>24 Oct 2020</p>
+                <p>$369,000</p>
                 <button>submit</button>
             </div>
         </div>
         <div class="rubrika">
             <img src="photos/2509343343-951533951-original.avif" alt="" class="img">
             <div class="views_date">
-                <p>22 Oct 2020</p>
+                <p>$450,999</p>
                 <button>submit</button>
             </div>
         </div>
         <div class="rubrika">
             <img src="photos/house.jpg" alt="" class="img">
             <div class="views_date">
-                <p>18 Oct 2020</p>
+                <p>$190,000</p>
                 <button>submit</button>
             </div>
         </div>
         <div class="rubrika">
             <img src="photos/imagereader (1).webp" alt="" class="img">
             <div class="views_date">
-                <p>12 Oct 2020</p>
+                <p>$222,000</p>
                 <button>submit</button>
             </div>
         </div>
         <div class="rubrika">
             <img src="photos/imagereader (1).webp" alt="" class="img">
             <div class="views_date">
-                <p>24 Sep 2020</p>
+                <p>$345,000</p>
                 <button>submit</button>
             </div>
         </div>
         <div class="rubrika">
             <img src="photos/imagereader (2).webp" alt="" class="img">
             <div class="views_date">
-                <p>21 Sep 2020</p>
+                <p>$999,999</p>
                 <button>submit</button>
             </div>
         </div>
         <div class="rubrika">
             <img src="photos/imagereader.webp" alt="" class="img">
             <div class="views_date">
-                <p>18 Sep 2020</p>
+                <p>$800,000</p>
                 <button>submit</button>
             </div>
         </div>
         <div class="rubrika">
             <img src="photos/OIP.png" alt="" class="img">
             <div class="views_date">
-                <p>14 Sep 2020</p>
+                <p>$250,000</p>
                 <button>submit</button>
             </div>
         </div>
         <div class="rubrika">
             <img src="photos/imagereader (3).webp" alt="" class="img">
             <div class="views_date">
-                <p>12 Sep 2020</p>
+                <p>$300,000</p>
                 <button>submit</button>
             </div>
         </div>
         <div class="rubrika">
             <img src="photos/imagereader (3).webp" alt="" class="img">
             <div class="views_date">
-                <p>12 Sep 2020</p>
+                <p>$600,000</p>
                 <button>submit</button>
             </div>
         </div>
     </d iv> 
     <div class="permifooter">
         <div class="previous">
-            <button class="btn_prev_next" style="background-color: rgb(34, 255, 244);">Previous</button>
+            <button>Previous</button>
         </div>
         <div class="numrat">
-            <button class="btn" style="background-color: lightseagreen;">1</button>
-            <button class="btn">2</button>
-            <button class="btn">3</button>
-            <button class="btn">4</button>
+            <button class="btn">1</button>
         </div>
         <div class="NextPage">
-            <button class="btn_prev_next" style="background-color: lightseagreen;">Next Page</button>
+            <button>Next Page</button>
         </div>
     </div>
 </div>  

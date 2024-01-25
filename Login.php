@@ -16,9 +16,7 @@
                         <i class="fa-solid fa-user"></i>
                         <input type="text" id="username2" placeholder="username" >
                     </div>
-
                     
-
                     <div class="input-field">
                         <i class="fa-solid fa-lock"></i>
                         <input type="password" id="password2" placeholder="password" >
@@ -32,12 +30,9 @@
                 </div>
             
         </div>
-
     </div>
-
     
     <script src="Login.js"></script>
     
-
 </body>
-</html>
+</html
