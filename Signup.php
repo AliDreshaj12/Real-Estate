@@ -23,7 +23,7 @@
                     </div>
 
                     <div class="input-field">
-                        <i class="fa-solid fa-lock"></i>
+                        <i class="fa-saolid fa-lock"></i>
                         <input type="password" id="password" placeholder="password" >
                     </div>
                     <p>Lost password <a href="#">Click Here</a></p>

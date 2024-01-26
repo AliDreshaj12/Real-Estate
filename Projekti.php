@@ -17,25 +17,69 @@
         <div class="komenti2">Ready, Set, Shop!</div>
     </div>
     <div class="AA">    
-        <img src="photos/outdoor.jpg" alt="3" class="hero">
-        <div class="bgfoto">
-            <h1>Real estate that works</h1>
-            <p>Creating a place to call home:
-                 From the time you walk in, until you make
-                  it your own. We make an effort to
-                   ensure that every little detail
-                    is taken care of - because
-                     when it comes to something
-                      as important as real estate,
-                       nothing short of perfect will
-                        do! With our dedication and
-                         commitment to excellence,
-                          we are confident that
-                           everyone can find their
-                            dream home here.</p>
-            <button>LEARN MORE</button>
-            </div>
+  <img src="photos/imagereader (3).webp" alt="3" class="hero">
+  <div class="bgfoto">
+      <h1>Real estate that works</h1>
+      <p>Creating a place to call home:
+           From the time you walk in, until you make
+            it your own. We make an effort to
+             ensure that every little detail
+              is taken care of - because
+               when it comes to something
+                as important as real estate,
+                 nothing short of perfect will
+                  do! With our dedication and
+                   commitment to excellence,
+                    we are confident that
+                     everyone can find their
+                      dream home here.</p>
+      <button>LEARN MORE</button>
+      </div>
+</div>
+
+<div class="AA">    
+<img src="photos/imagereader (2).webp" alt="3" class="hero">
+<div class="bgfoto">
+    <h1>Real estate that works</h1>
+    <p>Creating a place to call home:
+         From the time you walk in, until you make
+          it your own. We make an effort to
+           ensure that every little detail
+            is taken care of - because
+             when it comes to something
+              as important as real estate,
+               nothing short of perfect will
+                do! With our dedication and
+                 commitment to excellence,
+                  we are confident that
+                   everyone can find their
+                    dream home here.</p>
+    <button>LEARN MORE</button>
     </div>
+</div>
+  
+<div class="AA">    
+<img src="photos/imagereader (1).webp" alt="3" class="hero">
+<div class="bgfoto">
+  <h1>Real estate that works</h1>
+  <p>Creating a place to call home:
+       From the time you walk in, until you make
+        it your own. We make an effort to
+         ensure that every little detail
+          is taken care of - because
+           when it comes to something
+            as important as real estate,
+             nothing short of perfect will
+              do! With our dedication and
+               commitment to excellence,
+                we are confident that
+                 everyone can find their
+                  dream home here.</p>
+  <button>LEARN MORE</button>
+  </div>
+</div>
+</div>
+<script src="slideshow.js"></script>
     <div class="container">
         <h1 class="h">Our services</h1>
   <p class="p">All our services are available for you!</p>
