@@ -15,7 +15,7 @@
                     echo "Connection failed "; //per testim
                     return null;
                 }else{
-                    echo "Connection successful!"; //per testim
+                    //secho "Connection successful!"; //per testim
                     return $conn;
                 }
                 

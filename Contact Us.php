@@ -30,7 +30,7 @@
             </div>
             <div class="div2-3">
                 <form class="form1">
-                    <input type="text"placeholder="First Name">
+                    <input id="1" type="text"placeholder="First Name">
                     <input type="text"placeholder="Last Name">
                     <input type="text"placeholder="Email Addres">
                     <input type="text"placeholder="Phone">

@@ -1,5 +1,6 @@
 <?php
-    include_once('db.php');
+    include_once('DatabaseConnection.php');
+
 
     class shtepitrepository{
         private $connection;
@@ -19,10 +20,11 @@
             $Pershkrimi = $shtepia->getPershkrimi();
             $Qmimi = $shtepia->getQmimi();
             $Emri = $shtepia->getEmri();
-            $sql = "INSERT INTO shtepia( Pershkrimi, Qmimi,Emri) VALUES (?,?,?,?)";
+            $sql = "INSERT INTO shtepitp (Pershkrimi, Qmimi, Emri) VALUES (?, ?, ?)";
+
 
             $statement = $conn->prepare($sql);
-            $statement->execute([ $Pershkrimi, $Qmimi, $Emri]);
+            $statement->execute([$Pershkrimi, $Qmimi, $Emri]);
 
             echo "<script>alert('U shtua me sukses!')</script>";
         }
@@ -30,7 +32,8 @@
         public function getAllShtepit(){
             $conn = $this->connection;
 
-            $sql = "SELECT * FROM shtepit-p";
+            $sql = "SELECT * FROM shtepitp";
+
             $statement = $conn->query($sql);
 
             $shtepit = $statement->fetchAll();
@@ -42,21 +45,25 @@
         //dergohet parametri ne baze te cilit e identifikojme studentin (ne kete rast id, por mund te jete edhe ndonje atribut tjeter) dhe parametrat e tjere qe mund t'i ndryshojme (emri, mbiemri, etj...)
         public function editShtepia($id, $Pershkrimi, $Qmimi, $Emri){
             $conn = $this->connection;
-            $sql = "UPDATE shtepit-p SET Pershkrimi=?,Qmimi=?, Emri=? WHERE Id=?";
-
-            $statement = $conn->prepare($sql);
-            $statement->execute([$Pershkrimi,$Qmimi, $Emri, $id]);
-
-            echo "<script>alert('U ndryshua me sukses!')</script>";
-
+            $sql = "UPDATE shtepitp SET Pershkrimi=?, Qmimi=?, Emri=? WHERE Id=?";
+        
+            try {
+                $statement = $conn->prepare($sql);
+                $statement->execute([$Pershkrimi, $Qmimi, $Emri, $id]);
+                echo "<script>alert('U ndryshua me sukses!')</script>";
+            } catch(PDOException $e) {
+                echo "Error: " . $e->getMessage();
+            }
         }
+        
+        
 
         //delete
 
         function deleteShtepia($id){
             $conn = $this->connection;
 
-            $sql = "DELETE FROM shtepit-p WHERE Id=?";
+            $sql = "DELETE FROM shtepitp WHERE Id=?";
 
             $statement = $conn->prepare($sql);
             $statement->execute([$id]);
@@ -67,7 +74,7 @@
         function getShtepitById($id){
             $conn = $this->connection;
 
-            $sql = "SELECT * FROM shtepia-p WHERE Id=?";
+            $sql = "SELECT * FROM shtepitp WHERE Id=?";
 
             $statement = $conn->prepare($sql);
             $statement->execute([$id]);
