@@ -29,13 +29,13 @@
                 <p class="reg-p1">Pristina/Kosovo</p>
             </div>
             <div class="div2-3">
-                <form class="form1">
-                    <input id="1" type="text"placeholder="First Name">
-                    <input type="text"placeholder="Last Name">
-                    <input type="text"placeholder="Email Addres">
-                    <input type="text"placeholder="Phone">
-                    <input type="text"placeholder="Notes">
-                    <button class="submit">submit</button>
+                <form class="form1" action="connect.php" method="POST">
+                    <input id="1" type="text"placeholder="First Name" name="firstName" />
+                    <input type="text"placeholder="Last Name" name="lastName" />
+                    <input type="text"placeholder="Email Addres" name="email" />
+                    <input type="text"placeholder="Phone" name="number" />
+                    <input type="text"placeholder="Notes" name="notes" />
+                    <input type="submit" value="Submit">
                 </form>
             </div>
 
