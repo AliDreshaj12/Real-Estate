@@ -41,7 +41,7 @@
 ?>
 
 <div class="edit-title">
-    <p>Edit Vetura</p>
+    <p>Edit Shtepia</p>
 </div>
 
 <div class="form-div">

@@ -17,8 +17,8 @@
         <div class="komenti2">Ready, Set, Shop!</div>
     </div>
     <div class="AA">    
-  <img src="photos/imagereader (3).webp" alt="3" class="hero">
-  <div class="bgfoto">
+  <img src="photos/outdoor.jpg" alt="3" class="hero">
+  <div class="bgfoto" style="margin-top:220px;">
       <h1>Real estate that works</h1>
       <p>Creating a place to call home:
            From the time you walk in, until you make
@@ -38,8 +38,8 @@
 </div>
 
 <div class="AA">    
-<img src="photos/imagereader (2).webp" alt="3" class="hero">
-<div class="bgfoto">
+<img src="photos/best-new-york-city-real-estate-photographers.jpg" alt="3" class="hero">
+<div class="bgfoto"style="margin-top:220px;">
     <h1>Real estate that works</h1>
     <p>Creating a place to call home:
          From the time you walk in, until you make
@@ -59,8 +59,8 @@
 </div>
   
 <div class="AA">    
-<img src="photos/imagereader (1).webp" alt="3" class="hero">
-<div class="bgfoto">
+<img src="photos/im-700127.jpeg" alt="3" class="hero">
+<div class="bgfoto"style="margin-top:220px;">
   <h1>Real estate that works</h1>
   <p>Creating a place to call home:
        From the time you walk in, until you make

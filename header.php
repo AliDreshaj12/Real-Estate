@@ -11,6 +11,7 @@
                 <li><a href='Contact Us.php'>Contact Us</a></li>
                 <li><a href='About Us.php'>About Us</a></li>
                 <li><a href='Login.php'>Login</a></li>
+                <li><a href='sale.php'>Sale</a></li>
             </ul>
         </div>
     </nav>

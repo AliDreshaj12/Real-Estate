@@ -48,7 +48,7 @@
             </div>
         </div>
         <div class="rubrika">
-            <img src="photos/imagereader (1).webp" alt="" class="img">
+            <img src="photos/shtepi.jpeg" alt="" class="img">
             <div class="views_date">
                 <p>$345,000</p>
                 <button>submit</button>
@@ -69,14 +69,14 @@
             </div>
         </div>
         <div class="rubrika">
-            <img src="photos/OIP.png" alt="" class="img">
+            <img src="photos/shtepia1.webp" alt="" class="img">
             <div class="views_date">
                 <p>$250,000</p>
                 <button>submit</button>
             </div>
         </div>
         <div class="rubrika">
-            <img src="photos/imagereader (3).webp" alt="" class="img">
+            <img src="photos/arizona-luxury-home-builder.jpg" alt="" class="img">
             <div class="views_date">
                 <p>$300,000</p>
                 <button>submit</button>
