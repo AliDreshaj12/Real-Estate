@@ -1,9 +1,9 @@
 <?php
 session_start();
-include 'shtepitrepository.php';
+include 'aboutrepository.php';
     $id = $_GET['id'];
-    $shtepi = new shtepitrepository();
-    $shtepit = $shtepi->getShtepitById($id);
+    $about = new aboutrepository();
+    $aboutus = $about->getAboutById($id);
 
 
 ?>
@@ -29,14 +29,6 @@ include 'shtepitrepository.php';
 <div class="form-div">
     <form class="edit" action="<?php echo $_SERVER['PHP_SELF'] . '?id=' . $id; ?>" method="POST">
         <div>
-            <label for="">Pershkrimi:</label>  
-            <input class="input-1" type="text" name="pershkrimi" value="<?php echo $shtepit['Pershkrimi']?>">
-
-            <label for="">Qmimi:</label>
-            <input class="input-2" type="text" name="qmimi" value="<?php echo $shtepit['Qmimi']?>">
-
-            <label for="">Emri:</label>
-            <input class="input" type="text" name="emri" value="<?php echo $shtepit['Emri']?>">
 
             <label for="">Image:</label>
             <input class="input" type="file" name="image" value="<?php echo $shtepit['img']?>">
@@ -51,15 +43,12 @@ include 'shtepitrepository.php';
 <?php 
     if(isset($_POST['editB'])){
         $id = $id;
-        $pershkrimi = $_POST['pershkrimi'];
-        $qmimi = $_POST['qmimi'];
-        $emri = $_POST['emri'];
         $image =$_POST['image'];
         
-        $shtepi->editShtepia($id, $pershkrimi, $qmimi, $emri,$image);
+        $about->editAbout($id,$image);
         
         header("location:Dashboard.php");
         exit();
     }
-    $shtepit=$shtepi->getShtepitById($id);
+    $aboutus=$about->getAboutById($id);
 ?>

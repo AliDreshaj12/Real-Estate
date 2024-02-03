@@ -35,7 +35,7 @@
                     <input type="text"placeholder="Email Addres" name="email" />
                     <input type="text"placeholder="Phone" name="number" />
                     <input type="text"placeholder="Notes" name="notes" />
-                    <input type="submit" value="Submit">
+                    <input type="submit" value="Submit" name="in">
                 </form>
             </div>
 
@@ -49,7 +49,18 @@
              width="901" height="250" style="border:0;" allowfullscreen="" loading="lazy"
              referrerpolicy="no-referrer-when-downgrade"></iframe></p>
     </div>
-
+            <?php
+                if (isset($_POST['in'])) {
+                    include_once 'connect.php';
+                    $obj = new Connect();
+                    $res = $obj->contact_us($_POST);
+                    if ($res == true) {
+                        echo "<script>alert('Message sent successfully. Thank you!')</script>";
+                    } else {
+                        echo "<script>alert('Something went wrong! Please try again.')</script>";
+                    }
+                }
+            ?>
 
     
 </body>

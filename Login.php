@@ -23,7 +23,7 @@
                         $_SESSION['name'] = $user_data['username'];
                         $_SESSION['roli'] = $user_data['roli'];
 
-                        header("location:home-page.php");
+                        header("location:Projektis.php");
                         die;
 
                     }
@@ -38,7 +38,6 @@
     }
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -51,29 +50,26 @@
     <div class="container">
         <div class="form-box">
             <h1 id="title">LOGIN</h1>
-            <form action="Projekti.html" onsubmit="return validateForm2()">
+            <form  onsubmit="return validateForm2()" method="POST">
                 <div class="input-group">
                     <div class="input-field" id="nameField" >
                         <i class="fa-solid fa-user"></i>
-                        <input type="text" id="username" placeholder="username" >
+                        <input type="text" id="username" name="username" placeholder="username">
                     </div>
                     
                     <div class="input-field">
                         <i class="fa-solid fa-lock"></i>
-                        <input type="password" id="psw" placeholder="password" >
+                        <input type="password" id="psw" name="psw" placeholder="password">
                     </div>
                     <p>Lost password <a href="#">Click Here</a></p>
-                    <p>Not a member? <a href="Signup.html">Sign Up</a></p>
+                    <p>Not a member? <a href="Signup.php">Sign Up</a></p>
                 </div>
                 <div class="btn-field">
                     <button type="submit" id="signupBtn">Login</button>
-                    
                 </div>
-            
+            </form>
         </div>
     </div>
-    
     <script src="Login.js"></script>
-    
 </body>
 </html>
