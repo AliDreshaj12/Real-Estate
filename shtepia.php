@@ -5,11 +5,13 @@ class Shtepia{
     private $Pershkrimi;
     private $Qmimi;
     private $Emri;
+    private $image;
 
-    public function __construct( $p, $q, $e){
+    public function __construct( $p, $q, $e,$i){
         $this->Pershkrimi=$p;
         $this->Qmimi=$q;
         $this->Emri=$e;
+        $this->image=$i;
     }
     
 
@@ -32,6 +34,12 @@ class Shtepia{
     }
     public function setEmri($e){
         $this->Emri = $e;
+    }
+    public function getImage(){
+        return $this->image;
+    }
+    public function setImage($i){
+        $this->image = $i;
     }
 
     public function __toString(){

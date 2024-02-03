@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -13,14 +16,31 @@
 
     ?>
     <div class="Komenti">
-        <div class="komenti1">Ready, Set, Shop!</div>
+        <div class="komenti1">Ready, Set, Shop!
+        <?php
+                if (isset($_SESSION['roli'])) {
+                    if($_SESSION['roli']=="admin"){
+                        echo"
+                            <div class='buttons'>
+                                <button class='dash-btn'>
+                                    <a href='Dashboard.php'>Dashboard</a>
+                                </button>
+
+                                <button class='logout-b'>
+                                    <a href='logout.php'>Log Out</a>
+                                </button>
+                            </div> ";
+                    }
+                } 
+            ?>
+        </div>
         <div class="komenti2">Ready, Set, Shop!</div>
     </div>
     <div class="AA">    
   <img src="photos/outdoor.jpg" alt="3" class="hero">
   <div class="bgfoto" style="margin-top:220px;">
-      <h1>Real estate that works</h1>
-      <p>Creating a place to call home:
+      <h1 id="h1">Real estate that works</h1>
+      <p id="para">Creating a place to call home:
            From the time you walk in, until you make
             it your own. We make an effort to
              ensure that every little detail
@@ -101,6 +121,8 @@
                  real estate firms in<br> finding the
                   perfect plot of land for their
                    desired property.</p>
+
+                   
         </div>
     </div>
     <div class="rubrika">
@@ -117,7 +139,7 @@
   </div>
   <button class="bt">VIEW MORE</button>
     </div>
-
+    
     <div class="marketing">
         <p>Simply Better, Every Day</p>
         <h1>The best real estate firm</h1>

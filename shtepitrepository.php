@@ -20,11 +20,14 @@
             $Pershkrimi = $shtepia->getPershkrimi();
             $Qmimi = $shtepia->getQmimi();
             $Emri = $shtepia->getEmri();
-            $sql = "INSERT INTO shtepitp (Pershkrimi, Qmimi, Emri) VALUES (?, ?, ?)";
+            $Image = $shtepia->getImage();
+            $sql = "INSERT INTO shtepitp (Pershkrimi, Qmimi, Emri, img) VALUES (?, ?, ?, ?)";
+
+
 
 
             $statement = $conn->prepare($sql);
-            $statement->execute([$Pershkrimi, $Qmimi, $Emri]);
+            $statement->execute([$Pershkrimi, $Qmimi, $Emri, $Image]);
 
             echo "<script>alert('U shtua me sukses!')</script>";
         }
@@ -43,13 +46,13 @@
 
         //Pjesa tjeter e funksioneve CRUD: update 
         //dergohet parametri ne baze te cilit e identifikojme studentin (ne kete rast id, por mund te jete edhe ndonje atribut tjeter) dhe parametrat e tjere qe mund t'i ndryshojme (emri, mbiemri, etj...)
-        public function editShtepia($id, $Pershkrimi, $Qmimi, $Emri){
+        public function editShtepia($id, $Pershkrimi, $Qmimi, $Emri, $Image){
             $conn = $this->connection;
-            $sql = "UPDATE shtepitp SET Pershkrimi=?, Qmimi=?, Emri=? WHERE Id=?";
+            $sql = "UPDATE shtepitp SET Pershkrimi=?, Qmimi=?, Emri=? ,img=? WHERE Id=?";
         
             try {
                 $statement = $conn->prepare($sql);
-                $statement->execute([$Pershkrimi, $Qmimi, $Emri, $id]);
+                $statement->execute([$Pershkrimi, $Qmimi, $Emri,$Image , $id]);
                 echo "<script>alert('U ndryshua me sukses!')</script>";
             } catch(PDOException $e) {
                 echo "Error: " . $e->getMessage();

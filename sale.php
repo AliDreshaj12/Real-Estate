@@ -1,3 +1,12 @@
+<?php
+    include "DatabaseConnection.php";
+    include_once "shtepitrepository.php";
+
+    $shtepi = new shtepitrepository();
+    $shtepit = $shtepi ->getAllShtepit();
+
+?>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -19,7 +28,7 @@
         <p>Page <button value="1">1</button> of 1</p>
     </div>
     <div class="fotografit">
-        <div class="rubrika">
+        <!-- <div class="rubrika">
             <img src="photos/009_6415_DAHLONEGA_ROAD_290588_524670.webp" alt="" class="img">
             <div class="views_date">
                 <p>$369,000</p>
@@ -81,15 +90,19 @@
                 <p>$300,000</p>
                 <button>submit</button>
             </div>
-        </div>
+        </div> -->
+        <?php foreach ($shtepit as $sht){?>
         <div class="rubrika">
-            <img src="photos/imagereader (3).webp" alt="" class="img">
+            <img src="photos/<?php echo $sht['img']?>" alt="" class="img">
             <div class="views_date">
-                <p>$600,000</p>
+                <p><?php echo $sht['Qmimi']?></p>
+                <p><?php echo $sht['Pershkrimi']?></p>
+                <p><?php echo $sht['Emri']?></p>
                 <button>submit</button>
             </div>
         </div>
-    </d iv> 
+        <?php }?>
+    </div> 
     <div class="permifooter">
         <div class="previous">
             <button>Previous</button>

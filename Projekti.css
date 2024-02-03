@@ -304,7 +304,20 @@
     
     
 }
-
+.dash-btn{
+    width:8em;
+    height: 3em;
+    border-radius: 1.4em;
+    background-color: #c74810;
+    border: 0.3em solid black;
+}
+.logout-b{
+    width:8em;
+    height: 3em;
+    border-radius: 1.4em;
+    background-color: #c74810;
+    border: 0.3em solid black;
+}
 .div2 input{
     
     color:white;
@@ -450,7 +463,67 @@
     border: none;
     background-color: #c74810;
   }
-  
+  @media only screen and (max-width: 991px) {
+    /* Shtoni stilet e tabletëve këtu */
+    .container {
+        padding: 0 15px;
+    }
+
+    .logo {
+        width: 30%;
+    }
+
+    .navbarLinks {
+        width: 60%;
+    }
+
+    ul li {
+        width: auto;
+        height: auto;
+        font-size: 0.8rem;
+    }
+
+    .komenti1,
+    .komenti2 {
+        font-size: 20px;
+    }
+
+    .hero {
+        height: 400px;
+    }
+
+    .bgfoto h1 {
+        font-size: 28px;
+    }
+
+    .bgfoto p {
+        font-size: 14px;
+    }
+
+    .form-group input {
+        width: 100%;
+        margin-right: 0;
+    }
+}
+
+
+@media only screen and (max-width: 900px) {
+    .nav{
+        display: flex;
+        flex-direction: row;
+    }
+    .navbarLinks{
+        margin-right: 2em;
+    }
+    #h1{
+        margin-top: -10em;
+    }
+    #para{
+        margin-top:-5em;
+    }
+    
+    
+}
   
 
 
