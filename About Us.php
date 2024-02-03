@@ -1,10 +1,17 @@
+<?php
+    include "DatabaseConnection.php";
+    include_once "aboutrepository.php";
+
+    $about = new aboutrepository();
+    $aboutus = $about ->getAllAbout();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="About Us.css">
-    <title>Document</title>
+    <title>About Us</title>
 </head>
 <body>
 <?php
@@ -32,12 +39,13 @@
                     Curious about what’s happening in your neighborhood? You can create a custom market report to see what’s active, under contract, and sold in your neighborhood! 
                     Considering selling or refinancing your home? Get an INSTANT property valuation now!
                     Contact us today to find out how we can be of assistance to you!</p> </div>
-                <div class="mark-2"><img src="photos/th (1).jpg" alt=""></div>
+            
         </div>
+        <?php foreach($aboutus as $ab) { ?>
         <div class="marketing1">
-            <div class="mark-2"><img src="photos/th.jpg" alt=""></div>
-            <div class="mark-2"><img src="photos/th(2).jpg" alt=""></div>
+            <div class="mark-2"><img src="photos/<?php echo $ab['img']?>" alt=""></div> 
         </div>
+<?php } ?>
 
     <hr class="hr2">
     <div class="schedule">

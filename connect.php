@@ -1,18 +1,59 @@
 <?php
-$firstName = isset($_POST['firstName']) ? $_POST['firstName'] : '';
-$lastName = isset($_POST['lastName']) ? $_POST['lastName'] : '';
-$email = isset($_POST['email']) ? $_POST['email'] : '';
-$phone = isset($_POST['numbers']) ? $_POST['numbers'] : ''; 
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 
-$conn = new mysqli('localhost', 'root', '', 'shtepit');
-if ($conn->connect_error) {
-    die('Connection Failed: ' . $conn->connect_error);
-} else {
-    $stmt = $conn->prepare("INSERT INTO contactus (firstName, lastName, email, numbers, notes) VALUES (?, ?, ?, ?, ?)");
-    $stmt->bind_param("sssss", $firstName, $lastName, $email, $phone, $notes);
-    $stmt->execute();
-    echo "Registration successful...";
-    $stmt->close();
-    $conn->close();
+class Connect {
+    private $host = "localhost";
+    private $user = "root";
+    private $pass = "";
+    private $db = "shtepit";
+    public $mysqli;
+
+    public function __construct() {
+        $this->mysqli = new mysqli($this->host, $this->user, $this->pass, $this->db);
+        if ($this->mysqli->connect_errno) {
+            echo "Failed to connect to MySQL: " . $this->mysqli->connect_error;
+            exit();
+        }
+    }
+
+    public function contact_us($data) {
+        $firstname = $this->mysqli->real_escape_string($data['firstName']);
+        $lastname = $this->mysqli->real_escape_string($data['lastName']);
+        $email = $this->mysqli->real_escape_string($data['email']);
+        $phone = $this->mysqli->real_escape_string($data['number']);
+        $notes = $this->mysqli->real_escape_string($data['notes']);
+        $q = "INSERT INTO contactus (firstName, lastName, Email, numbers, notes) VALUES ('$firstname', '$lastname', '$email', '$phone', '$notes')";
+
+        if ($this->mysqli->query($q)) {
+            return true;
+        } else {
+            echo "Error: " . $q . "<br>" . $this->mysqli->error;
+            return false;
+        }
+    }
+
+    public function getAllMessage() {
+        $conn = $this->mysqli;
+
+        $sql = "SELECT * FROM contactus";
+        $stmt = $conn->prepare($sql);
+        $stmt->execute();
+        $messages = $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
+        $stmt->close();
+
+        return $messages;
+    }
+}
+
+$obj = new Connect();
+
+if (isset($_POST['in'])) {
+    $res = $obj->contact_us($_POST);
+    if ($res == true) {
+        echo "<script>alert('Message sent successfully. Thank you!')</script>";
+    } else {
+        echo "<script>alert('Something went wrong! Please try again.')</script>";
+    }
 }
 ?>
